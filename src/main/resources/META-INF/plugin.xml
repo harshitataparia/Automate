@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>org.automate.toolkit</id>
+    <name>toolkit</name>
+    <vendor>0.0.1</vendor>
+
+    <description><![CDATA[
+    Tool Kit to automate creation of one or more files
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <internalFileTemplate name="SampleFileFormat"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="Utilities.MainAction" text="Toolkit" description="all the utilities">
+            <add-to-group group-id="MainMenu" anchor="last" />
+            <action class="org.toolkit.action.FileCreationAction" id="FileCreationAction" text="Project Creator"/>
+        </group>
+    </actions>
+</idea-plugin>
